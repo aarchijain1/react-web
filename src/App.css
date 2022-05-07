@@ -1,38 +1,668 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* Scroll Bar Removal */
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+.font-weight-bold1{
+  font-size: 3rem;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #fff;
+}
+.hi{
+  background-color: #040023;
+}
+.extradiv h2,
+.servicediv h2 {
+  font-size: 0.9rem;
+  margin: 20px 0 15px 0;
+  font-weight: bold;
+  line-height: 1.1;
+  word-spacing: 4px;
+  color: #00abff;
+}
+
+i {
+  color: #2fccd0;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXX common style ends here XXXXXXXXXXXXXXXXXXX */
+.header {
+  width: 100%;
+  height: 100vh;
+ 
+  background-image: linear-gradient(#34f7fa, #2fccd0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 77%, 50% 100%, 0 75%, 0 0);
+  position: relative;
+}
+#topheader{
+  background-color: #040023;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  z-index: -1;
+  background: #040023;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  z-index: -1;
+  background: #040023;
+}
+
+.nav-item a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.header-section {
+  width: 100%;
+  height: inherit;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.center-div {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.header-buttons a {
+  border: 1px solid #fff;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 12px 35px;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-buttons a:hover {
+  text-decoration: none;
+  color: #50d1c0;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center-div p {
+  font-size: 1.3rem;
+  padding: 10px 0 20px 0;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ********************* three extra header div starts ******************** */
+
+.header-extradiv {
+  background-color: #040023;
+  width: 100%;
+  height: auto;
+  margin: 100px 0;
+  text-align: center;
+
+}
+
+.extradiv p {
+  text-align: justify;
+}
+
+.extradiv {
+  background-color: #040023;
+  border: none;
+  padding: 30px !important;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.extradiv:hover {
+  color: #040023;
+  box-shadow: -10px 10px 20px 10px rgba(62, 169, 211, 0.3);
+  transform: translateY(-20px);
+}
+
+
+
+
+/* ********************* three extra header div ends ******************** */
+
+/* ******************* service offer css start ********************** */
+
+.serviceoffers {
+  background-color: #040023;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+.headings {
+  margin-bottom: 50px;
+}
+
+.headings h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.names h1 {
+  color: #2e2e2e;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.service-icons {
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.progress {
+  height: 0.6rem !important;
+  margin-bottom: 25px !important;
+}
+
+/* ******************* service offer css ends ********************** */
+
+/* ********************* project (completed) starts ****************************** */
+
+.project-work {
+  margin: 100px 0;
+}
+
+.project-work h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ********************* project (completed) ends ****************************** */
+
+/* ***********************timeline starts*********************************** */
+.container1 {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.container1::before {
+  position: absolute;
+  left: 50%;
+  content: '';
+  width: 5px;
+  height: 100%;
+  background-color: rgb(231, 230, 230);
+  border-radius: 5px;
+}
+
+.entry {
+  margin: 50px 10px;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  top: -5px;
+  left: calc(50% - 5px);
+  width: 15px;
+  height: 15px;
+  background-color: #16c9f6;
+  border-radius: 50%;
+}
+
+.indicator span {
+  position: relative;
+  top: -7px;
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  background-color:#023441;
+  border-radius: 50%;
+}
+
+.content {
+  width: 200px;
+  margin: 0 auto;
+  transform: translate(-58%, -9px);
+  font-size: 14px;
+  text-align: right;
+}
+
+.entry:nth-child(odd) .content {
+  text-align: left;
+  transform: translate(60%, -9px);
+}
+
+.content span {
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  color:#16c9f6;
+}
+
+.time {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-130%, -48%);
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background-color: #16c9f6;
+  box-shadow: 0 3px 6px 0 #033642;
   color: white;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.entry:nth-child(even) .time {
+  transform: translate(40%, -48%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px) {
+  .container1 {
+      margin: 0;
+      
   }
-  to {
-    transform: rotate(360deg);
+
+  .entry:nth-child(even) .content, .entry:nth-child(odd) .content {
+      text-align: left;
+      transform: translate(60%, -9px);
+  }
+
+  .entry:nth-child(even) .time, .entry:nth-child(odd) .time {
+      transform: translate(-130%, -48%);
+  }
+}
+/* *************timeline ends************************** */
+
+/* ********************* our pricing starts ******************************  */
+
+.pricing {
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+}
+
+.pricing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: linear-gradient(160deg, #16c9f6 55%, #fff 0%);
+}
+
+.money {
+  font-size: 40px;
+  line-height: 1;
+  color: #606060;
+}
+
+.card {
+  transition: 0.4s ease;
+  border: 0.5px solid #fff !important;
+}
+
+.card-header {
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: #040023 !important;
+  padding: 25px 0 !important;
+}
+
+.card-body {
+  padding: 30px 0 !important;
+  background: #040023 !important;
+
+}
+
+.card-body li {
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #606060;
+}
+
+.card-footer {
+  background: #040023 !important;
+  padding: 30px 0 !important;
+}
+
+.card-footer a {
+  border: 1px solid #fff !important;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 12px 35px;
+  outline: none;
+  color: #50d1c0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.card:hover .card-footer a {
+  text-decoration: none;
+  color: black;
+  background-color: #50d1c0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-header,
+.card:hover .money,
+.card:hover li {
+  color: #50d1c0;
+}
+
+.card-second {
+  transform: translateY(-20px);
+  background-color: #040023 !important;
+  /* box-shadow: 0 0 20px 0 rgba(0,0,0,0.3); */
+}
+.card-third{
+  transform: translateY(20px);
+  background-color: #040023 !important;
+}
+
+/* ********************* our pricing ends ****************************** */
+
+
+/* ********************* our happy clients starts ******************************  */
+
+.happyclients {
+  width: 100%;
+  height: 100vh;
+  padding: 80px 0;
+}
+
+.box {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.box:hover {
+  background: #16c9f6;
+}
+
+.box:hover p {
+  color: #fff;
+}
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: -60px !important;
+}
+
+.carousel-indicators li {
+  background-color: #16c9f6 !important;
+}
+
+.box a {
+  position: relative;
+}
+
+.box a img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.box a::after {
+  content: "\f10d";
+  font-family: FontAwesome;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+  color: #fff;
+  position: absolute;
+  top: 120%;
+  left: 70%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.box h2 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+/* ********************* our happy clients ends ******************************  */
+
+
+/* ********************* contact us starts ******************************  */
+
+.contactus {
+  width: 100%;
+  height: 100vh;
+  padding: 80px 0;
+  position: relative;
+}
+
+.contactus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(330deg, #43d0f3 55%, #040023 0%);
+}
+
+.form-button button {
+  border: 1px solid #50c1d0;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 12px 35px;
+  outline: none;
+  color: #50d1c0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  background: transparent;
+}
+
+form:hover .form-button button {
+  background: #fff;
+  color: #50d1c0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+::placeholder {
+  font-size: 0.85rem;
+}
+
+/* ********************* contact us ends ******************************  */
+
+/* ********************* newsletter starts ****************************** */
+
+.newsletter {
+  width: 100%;
+  height: auto;
+  margin: 80px 0;
+}
+
+.newsletter-input {
+  border-radius: 100px 0px 0px 100px !important;
+  min-width: 150px;
+  min-height: 45px;
+}
+
+.input-group-text {
+  color: #fff !important;
+  background: #5bc0de !important;
+  border-radius: 0 100px 100px 0 !important;
+  min-width: 130px;
+  min-height: 45px;
+}
+
+.input-group-text:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* *********************  newsletter ends ****************************** */
+
+/* *********************  footer starts ****************************** */
+
+.footersection {
+  width: 100%;
+  height: auto;
+  padding: 70px 0 20px 0;
+  background: #00abff;
+  position: relative;
+}
+
+.footersection p {
+  color: #fff;
+}
+
+.footer-navlinks {
+  text-align: center;
+}
+
+.footersection li a {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.footersection h3 {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#myBtn {
+  /* display: none; */
+  position: fixed;
+  bottom: 2rem;
+  right: 4rem;
+  z-index: 10;
+  border: none;
+  color: #fff;
+  background: #00abff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background: #606060;
+}
+
+/* *********************  footer ends ****************************** */
+
+
+/* ****************** Media Queries ********************** */
+@media (max-width: 768px) {
+  .nav-item {
+    text-align: center !important;
+  }
+
+  .pricing,
+  .happyclients,
+  .contactus {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .card-second {
+    transform: translateY(0px);
+    margin: 30px 0;
+  }
+
+  .contactus p {
+    padding: 0 50px;
+  }
+
+  .footer-navlinks {
+    text-align: left;
+  }
+
+  .footer-div {
+    margin: 30px 0;
   }
 }
